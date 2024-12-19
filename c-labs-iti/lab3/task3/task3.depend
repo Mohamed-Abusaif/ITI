@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1731958909 source:/home/mohamed-abusaif/Downloads/2.Projects Repos/c-labs-iti/lab3/task3/main.c
+	<stdio.h>
+	<stdlib.h>
+

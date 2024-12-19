@@ -1,0 +1,22 @@
+1- test the extended keys first alone with the numbers for each key 
+
+2- setiting colors alone , how to design a menu 
+
+3- each menu has positions ->
+    position 0 -> blue - white - white 
+    position 1 ->white , blue - white 
+    position 2 -> white , white , blue
+
+4- for loop to count and loop on the menu and prevent overlaping by using system clear 
+
+5- when you make sure the positioning work 
+
+6- then move to adding the extended key 
+
+    up -> position ++ 
+    down -> position --
+
+7- you can put the flag for the final exit of the app  
+------------------------------
+divide the project into small functions and parts 
+
