@@ -23,5 +23,15 @@ class lab3 {
         Double fahrenheit = celsiusConversion.apply(celsius);
         System.out.println(celsius + " Celsius is " + fahrenheit + " Fahrenheit.");
 
+        System.out.println("==================================================");
+
+        Integer a = 5;
+        Integer b = 6;
+        swap newSwap = new swap();
+        newSwap.apply(a, b);
+
+        System.out.println("a Value Is: " + a);
+        System.out.println("b Value Is: " + b);
+
     }
 }
