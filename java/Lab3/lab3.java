@@ -25,8 +25,8 @@ class lab3 {
 
         System.out.println("==================================================");
 
-        Integer a = 5;
-        Integer b = 6;
+        Integer a = new Integer(5);
+        Integer b = new Integer(6);
         swap newSwap = new swap();
         newSwap.apply(a, b);
 
