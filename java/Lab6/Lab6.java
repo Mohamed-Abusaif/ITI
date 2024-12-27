@@ -1,8 +1,7 @@
 import java.util.*;
-import java.util.ArrayList;
 
 class Lab6 {
-    static Map<Character, String[]> map = new TreeMap<>();
+    static Map<Character, List<String>> map = new TreeMap<>();
 
     static void addWord(String word) {
         char firstChar = word.charAt(0);
@@ -10,6 +9,7 @@ class Lab6 {
         if (!map.containsKey(firstChar)) {
             map.put(firstChar, new ArrayList<>());
         }
+        map.get(firstChar).add(word);
 
     }
 
