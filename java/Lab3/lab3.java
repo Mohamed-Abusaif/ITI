@@ -1,4 +1,7 @@
-import package1.*;
+import library.*;
+import package1.CelsiusConversion;
+import package1.Quadratic;
+import package1.swap;
 
 class lab3 {
 
