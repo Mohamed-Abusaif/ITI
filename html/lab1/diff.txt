@@ -1,0 +1,15 @@
+<b> vs. <strong>:
+<b>: Used for bolding text, primarily for stylistic purposes, without indicating any extra importance.
+<strong>: Semantically indicates that the text is important and bolds it as a visual cue.
+
+<i> vs. <em>:
+<i>: Used for italicizing text, typically for stylistic purposes like emphasizing foreign words or names.
+<em>: Indicates emphasis and italicizes the text, semantically signaling that the content carries importance or stress.
+
+<s> vs. <del>:
+<s>: Strikes through text to indicate something no longer accurate or relevant but still worth displaying.
+<del>: Indicates that the text has been removed or deleted, often with semantic meaning in collaborative editing contexts.
+
+<s> vs. <ins>:
+<s>: Adds a strikethrough to denote something irrelevant or invalid.
+<ins>: Used to indicate inserted content, often with an underline by default.
