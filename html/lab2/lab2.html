@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 2</title>
+    <style>
+      form {
+        background-color: #e1eacd;
+        margin-left: 30rem;
+        border: black 2px;
+        width: 50%;
+      }
+      input {
+        padding: 1em;
+      }
+      .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      #submit-button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #submit-button:hover {
+        background-color: #0056b3;
+      }
+      section.feedback-section label {
+        font-weight: bold;
+        color: #333;
+      }
+      /*Boxes*/
+      div {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: #f44336;
+      }
+
+      .box2 {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        background-color: #4caf50;
+      }
+
+      .box3 {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        background-color: #2196f3;
+      }
+
+      .box4 {
+        width: 100px;
+        height: 100px;
+        border: 5px solid #ff9800;
+        background-color: #9c27b0;
+      }
+
+      .box5 {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 5px solid #00bcd4;
+        box-sizing: border-box;
+        background-color: #e91e63;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Q1</h1>
+    <form action="">
+      <label>Username</label>
+      <input type="text" value="Username" />
+      <label>Password:</label>
+      <input type="password" />
+      <label>Confirm Password:</label>
+      <input type="Confirm password" />
+      <label>Phone Number:</label>
+      <input type="number" />
+      <label>Email:</label>
+      <input type="email" />
+      <label>Gender</label>
+      <input type="radio" id="Male" />
+      <label for="Male">Male</label>
+      <input type="radio" id="Female" />
+      <label for="Female">Female</label>
+      <h3>Date of Birth:</h3>
+      <input type="date" />
+      <h3>Do you Like this lab:</h3>
+      <label for="Yes">Yes</label>
+      <input type="radio" checked="checked" />
+      <label for="No">No</label>
+      <input type="radio" />
+      <h3>Rate our Session</h3>
+      <input type="range" min="0" max="10" value="5" />
+      <h3>Favorite Color:</h3>
+      <input type="checkbox" id="red" value="red" name="red" />
+      <label for="red">Red</label>
+      <input type="checkbox" id="green" value="green" name="green" />
+      <label for="green">Green</label>
+      <input type="checkbox" id="blue" value="blue" name="blue" />
+      <label for="blue">Blue</label>
+      <h3>Feedback</h3>
+      <input type="text" name="" id="" />
+      <h3>Upload Resume:</h3>
+      <input type="file" />
+      <h3>Your Favorite Language:</h3>
+      <input type="checkbox" name="Arabic" />
+      <label for="Arabic">Arabic</label>
+      <input type="checkbox" name="English" />
+      <label for="English">English</label>
+      <input
+        type="text"
+        name=""
+        id=""
+        value="Will be sent automatically! "
+        hidden
+      />
+      <input type="submit" />
+    </form>
+    <br />
+    <hr />
+    <br />
+    <h1>Q2</h1>
+
+    <header>
+      <h1>Register</h1>
+    </header>
+    <form>
+      <section>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </fieldset>
+      </section>
+      <button type="submit">Submit</button>
+    </form>
+    <footer>
+      <a href="/terms">Terms and Conditions</a>
+    </footer>
+  </body>
+  <br />
+  <hr />
+  <br />
+  <h1>Q5</h1>
+  <main>
+    <header>
+      <h1>Feedback Form</h1>
+    </header>
+    <form>
+      <section class="feedback-section">
+        <fieldset>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            class="input-field"
+            name="name"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            class="input-field"
+            name="email"
+            required
+          />
+
+          <label for="feedback">Feedback:</label>
+          <textarea
+            id="feedback"
+            class="input-field"
+            name="feedback"
+            rows="4"
+            required
+          ></textarea>
+        </fieldset>
+      </section>
+      <button type="submit" id="submit-button">Submit</button>
+    </form>
+  </main>
+  <br />
+  <hr />
+  <br />
+  <h1>Q6</h1>
+  <main>
+    <header>
+      <h1>Survey Form</h1>
+    </header>
+    <form>
+      <section>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label>How satisfied are you with our service?</label>
+        <input
+          type="radio"
+          id="very-satisfied"
+          name="satisfaction"
+          value="very-satisfied"
+          required
+        />
+        <label for="very-satisfied">Very Satisfied</label><br />
+
+        <input
+          type="radio"
+          id="satisfied"
+          name="satisfaction"
+          value="satisfied"
+        />
+        <label for="satisfied">Satisfied</label><br />
+
+        <input type="radio" id="neutral" name="satisfaction" value="neutral" />
+        <label for="neutral">Neutral</label><br />
+
+        <input
+          type="radio"
+          id="dissatisfied"
+          name="satisfaction"
+          value="dissatisfied"
+        />
+        <label for="dissatisfied">Dissatisfied</label><br />
+
+        <label>Which of the following features do you use? </label>
+        <input type="checkbox" id="feature1" name="features" value="feature1" />
+        <label for="feature1">Feature 1</label><br />
+
+        <input type="checkbox" id="feature2" name="features" value="feature2" />
+        <label for="feature2">Feature 2</label><br />
+
+        <input type="checkbox" id="feature3" name="features" value="feature3" />
+        <label for="feature3">Feature 3</label><br />
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </section>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <br />
+  <hr />
+  <br />
+  <main>
+    <header>
+      <h1>Blog Post Title</h1>
+      <p>Welcome to the discussion section below. Share your thoughts!</p>
+    </header>
+    <section class="comment-section">
+      <article class="comment-form">
+        <h2>Leave a Comment</h2>
+        <form action="/submit-comment" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <textarea
+            name="comment"
+            rows="4"
+            placeholder="Your Comment"
+            required
+          ></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </article>
+      <h2>Comments</h2>
+      <article class="comment">
+        <p>
+          <strong>John Doe:</strong> This is a great post! Thanks for sharing.
+        </p>
+      </article>
+      <article class="comment">
+        <p>
+          <strong>Jane Smith:</strong> I found this very informative. Looking
+          forward to more!
+        </p>
+      </article>
+    </section>
+    <h1>Accessible Form</h1>
+    <form class="accessible-form">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required />
+      </fieldset>
+      <fieldset>
+        <legend>Preferences</legend>
+        <label for="language">Preferred Language:</label>
+        <select id="language" name="language">
+          <option value="english">English</option>
+          <option value="arabic">Arabic</option>
+          <option value="french">French</option>
+        </select>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <div class="box1">Box 1</div>
+  <div class="box2">Box 2</div>
+  <div class="box3">Box 3</div>
+  <div class="box4">Box 4</div>
+  <div class="box5">Box 5</div>
+</html>
