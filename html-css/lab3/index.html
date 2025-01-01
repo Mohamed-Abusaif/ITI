@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 3</title>
+    <style>
+      .profile-card {
+        text-align: center;
+        border: 1px solid #000;
+        padding: 20px;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+      .profile-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      .profile-card button {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .profile-card button:hover {
+        background-color: darkblue;
+      }
+
+      .menu-bar {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .menu-bar a {
+        background-color: lightgray;
+        padding: 10px;
+        text-decoration: none;
+      }
+      .menu-bar a:hover {
+        background-color: gray;
+      }
+
+      .gallery img {
+        border: 2px solid black;
+        margin: 10px;
+        display: block;
+      }
+      .gallery p {
+        text-align: center;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: Arial, sans-serif;
+        color: blue;
+        letter-spacing: 2px;
+      }
+      p {
+        font-family: Georgia, serif;
+        color: gray;
+        line-height: 1.5;
+      }
+
+      ul li:first-child {
+        font-weight: bold;
+        color: red;
+      }
+
+      a:hover {
+        color: green;
+      }
+
+      .box-card {
+        padding: 20px;
+        margin: 20px auto;
+        border: 1px solid black;
+        background-color: lightblue;
+        width: 300px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Exploring the Future of Technology</h1>
+      <h2>Understanding Artificial Intelligence and Its Impact</h2>
+    </header>
+
+    <nav class="menu-bar">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <main>
+      <section>
+        <h3>What is Artificial Intelligence?</h3>
+        <p>
+          Artificial Intelligence (AI) refers to the simulation of human
+          intelligence in machines that are programmed to think and learn. AI
+          has the potential to revolutionize industries by automating tasks,
+          improving efficiency, and enabling more advanced problem-solving
+          capabilities.
+        </p>
+        <p>
+          In recent years, AI has made significant strides in areas such as
+          healthcare, finance, and transportation, making processes faster and
+          more accurate.
+        </p>
+      </section>
+
+      <ol>
+        <li>Understanding Machine Learning</li>
+        <li>Applications of AI in Different Industries</li>
+        <li>The Future of AI and Its Ethical Implications</li>
+      </ol>
+
+      <table border="1">
+        <tr>
+          <th>Student Name</th>
+          <th>Grade</th>
+        </tr>
+        <tr>
+          <td>Alice</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>B</td>
+        </tr>
+      </table>
+
+      <div class="profile-card">
+        <img src="profile.jpeg" alt="Mohamed Abusaif's Profile Picture" />
+        <h3>Mohamed Abusaif</h3>
+        <p>Full-stack Web Developer and AI Enthusiast</p>
+        <button>Contact Me</button>
+      </div>
+
+      <div class="gallery">
+        <img src="images.jpeg" alt="AI Concept" />
+        <p>AI Concept</p>
+        <img src="images2.jpeg" alt="Technology Innovation" />
+        <p>Technology Innovation</p>
+        <img src="images3.jpg" alt="Future of Work" />
+        <p>Future of Work</p>
+      </div>
+
+      <form>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value="Mohamed Abusaif"
+        /><br /><br />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value="mohamed@example.com"
+        /><br /><br />
+
+        <label for="language">Favorite Programming Language:</label>
+        <select id="language" name="language">
+          <option>JavaScript</option>
+          <option>Python</option>
+          <option>Java</option></select
+        ><br /><br />
+
+        <label>Skill Level:</label>
+        <input type="radio" id="beginner" name="level" value="beginner" />
+        <label for="beginner">Beginner</label>
+        <input
+          type="radio"
+          id="intermediate"
+          name="level"
+          value="intermediate"
+          checked
+        />
+        <label for="intermediate">Intermediate</label>
+        <input type="radio" id="advanced" name="level" value="advanced" />
+        <label for="advanced">Advanced</label><br /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p>This is a paragraph styled with a specific color.</p>
+
+      <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+      </ul>
+
+      <a href="#">Hover over this link</a>
+
+      <div class="box-card">
+        <h3>Box Model Card</h3>
+        <p>Simple Box Model Card.</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Mohamed Abusaif. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
