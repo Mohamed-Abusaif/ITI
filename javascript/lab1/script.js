@@ -77,7 +77,7 @@ console.log(longestWord(sentence));
 
 console.log("-----------------------------");
 
-function userGrades() { 
+function userGrades() {
   var userName = prompt("Enter your name: ");
   if (userName === undefined || userName === null) {
     return "Invalid input";
@@ -97,3 +97,62 @@ function userGrades() {
   var avg = sum / grades.length;
   console.log("Average: " + avg);
 }
+
+console.log("-----------------------------");
+
+var orders = [
+  {
+    orderId: "ORD001",
+    customer: "John Doe",
+    items: "item1:2,item2:1,item3:5",
+    orderDate: "2023-12-01",
+    deliveryDate: "2023-12-05",
+    deliveryAddress: "123, Main Street, Springfield, USA",
+  },
+  {
+    orderId: "ORD002",
+    customer: "Jane Smith",
+    items: "itemA:3,itemB:4",
+    orderDate: "2023-11-15",
+    deliveryDate: "2023-11-20",
+    deliveryAddress: "Flat 4B, Elmwood Apartments, New York, USA",
+  },
+  {
+    orderId: "ORD003",
+    customer: "Alice Johnson",
+    items: "itemX:1",
+    orderDate: "2023-10-10",
+    deliveryDate: "2023-10-15",
+    deliveryAddress: "456, Pine Lane, Denver, USA",
+  },
+];
+
+var formattedOrders = orders.map(function (order) {
+  var totalItems = 0;
+  var items = order.items.split(",");
+  items.forEach(function (item) {
+    totalItems += parseInt(item.split(":")[1]);
+  });
+  var deliveryDuration =
+    new Date(order.deliveryDate) - new Date(order.orderDate);
+  deliveryDuration = deliveryDuration / (1000 * 60 * 60 * 24);
+  var deliveryAddress = order.deliveryAddress.split(",");
+  var deliveryCountry = deliveryAddress[deliveryAddress.length - 1].trim();
+  var deliveryCity = deliveryAddress[deliveryAddress.length - 2].trim();
+  var deliveryStreet = deliveryAddress[deliveryAddress.length - 3].trim();
+  var buildingNumber = deliveryAddress[0].trim();
+  return {
+    orderId: order.orderId,
+    customer: order.customer,
+    totalItems: totalItems,
+    orderDate: order.orderDate,
+    deliveryDate: order.deliveryDate,
+    deliveryDuration: deliveryDuration,
+    deliveryCountry: deliveryCountry,
+    deliveryCity: deliveryCity,
+    deliveryStreet: deliveryStreet,
+    buildingNumber: buildingNumber,
+  };
+});
+
+console.log(formattedOrders);
