@@ -1,16 +1,18 @@
-console.log("Hello World!");
-
 //Check Palindrome:
-function isPalindrome(str) {
-  if (str === undefined || str === null) {
-    return false;
+function isPalindrome(s) {
+  if (s === undefined || s === null) {
+    return "Invalid input";
   }
-  str = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-  let reversedStr = str.split("").reverse().join("");
-  return str === reversedStr;
+  if (s.length === 0) {
+    return "Empty string";
+  }
+  s = s.toLowerCase();
+  var reversed = s.split("").reverse().join("");
+  return s === reversed;
 }
-// var s = "HeheH";
-// console.log(isPalindrome(s));
+
+var s = "HeheH";
+console.log(isPalindrome(s));
 
 console.log("-----------------------------");
 
@@ -30,9 +32,9 @@ function discountedPrice(price, discount) {
   return price - (price * discount) / 100;
 }
 
-// var price = 100;
-// var discount = 10;
-// console.log(discountedPrice(price, discount));
+var price = 100;
+var discount = 10;
+console.log(discountedPrice(price, discount));
 
 console.log("-----------------------------");
 
@@ -45,7 +47,7 @@ var myMovies = [
   "The Matrix",
 ];
 //a
-var myMoviesCopy = myMovies;
+var myMoviesCopy = myMovies.slice();
 //b
 myMoviesCopy[2] = "The Godfather";
 //c
@@ -54,6 +56,9 @@ console.log(myMovies.slice(-1));
 console.log(myMovies.slice(4));
 //d
 myMovies.unshift("The Shawshank Redemption");
+
+console.log(myMovies);
+console.log(myMoviesCopy);
 
 console.log("-----------------------------");
 
@@ -72,7 +77,7 @@ function longestWord(sentence) {
   return longestWord;
 }
 
-var sentence = "The quick brown fox jumped over the lazy dog";
+var sentence = "Hello From My Function!";
 console.log(longestWord(sentence));
 
 console.log("-----------------------------");
@@ -97,6 +102,7 @@ function userGrades() {
   var avg = sum / grades.length;
   console.log("Average: " + avg);
 }
+userGrades();
 
 console.log("-----------------------------");
 
@@ -156,3 +162,5 @@ var formattedOrders = orders.map(function (order) {
 });
 
 console.log(formattedOrders);
+console.log("-----------------gggggggggggggg------------");
+console.log(new Date(orders[0].deliveryDate) - new Date(orders[0].orderDate));
