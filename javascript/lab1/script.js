@@ -76,3 +76,24 @@ var sentence = "The quick brown fox jumped over the lazy dog";
 console.log(longestWord(sentence));
 
 console.log("-----------------------------");
+
+function userGrades() { 
+  var userName = prompt("Enter your name: ");
+  if (userName === undefined || userName === null) {
+    return "Invalid input";
+  }
+  var userGrades = prompt("Enter your grades in the format: 90,50,30,10");
+  if (userGrades === undefined || userGrades === null) {
+    return "Invalid input";
+  }
+  var grades = userGrades.split(",");
+  console.log("Welcome " + userName);
+  console.log("Grades: ");
+  console.table(grades);
+  var sum = 0;
+  for (var i = 0; i < grades.length; i++) {
+    sum += parseInt(grades[i]);
+  }
+  var avg = sum / grades.length;
+  console.log("Average: " + avg);
+}
