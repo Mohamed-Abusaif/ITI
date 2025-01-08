@@ -6,6 +6,7 @@ function isPalindrome(s) {
   if (s.length === 0) {
     return "Empty string";
   }
+  //add validation for if the user anything else instead of string 
   s = s.toLowerCase();
   var reversed = s.split("").reverse().join("");
   return s === reversed;
@@ -35,7 +36,7 @@ function discountedPrice(price, discount) {
 var price = 100;
 var discount = 10;
 console.log(discountedPrice(price, discount));
-
+//prompt function what it takes and what will be the type of each input 
 console.log("-----------------------------");
 
 //Array of Movies:
@@ -45,6 +46,8 @@ var myMovies = [
   "Fight Club",
   "Inception",
   "The Matrix",
+  "omar", 
+
 ];
 //a
 var myMoviesCopy = myMovies.slice();
@@ -110,7 +113,7 @@ var orders = [
   {
     orderId: "ORD001",
     customer: "John Doe",
-    items: "item1:2,item2:1,item3:5",
+    items: "item12:,item2:1,item3:5",
     orderDate: "2023-12-01",
     deliveryDate: "2023-12-05",
     deliveryAddress: "123, Main Street, Springfield, USA",
