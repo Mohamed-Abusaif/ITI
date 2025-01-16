@@ -26,7 +26,7 @@ var obj = {
   __proto__: Object,
   message: "This is a message",
 };
-obj.__proto__.toString = function () {
+obj.toString = function () {
   console.log(this.message);
 };
 String(obj);
@@ -98,7 +98,7 @@ function checkCar1(obj) {
 function checkCar2(obj) {
   var objPrototype = Object.getPrototypeOf(obj);
   // console.log(objPrototype);
-  if(objPrototype.drive){
+  if(objPrototype.drive){//objectPrototype === Car.prototype
     console.log("Object is a Car!");
   }
   else{

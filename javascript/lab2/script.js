@@ -1,6 +1,7 @@
 //a function to calculate the sum of digits in a number
 
 function sumOfDigits(num) {
+  //throw an error if it is not a number and if it is a number in a string etract it 
   var sum = 0;
   while (num > 0) {
     sum += num % 10;
@@ -14,6 +15,7 @@ console.log(sumOfDigits(1234));
 //a function to calculate the number of vowels in a string
 
 function countVowels(str) {
+  //convert to lower case before operation
   var count = 0;
   var vowels = "aeiou";
   for (var i = 0; i < str.length; i++) {
