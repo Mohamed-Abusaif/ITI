@@ -1,0 +1,211 @@
+:root {
+  --background-color: #0f0f0f;
+  --primary-color: #16ff00;
+  --secondary-color: #ad49e1;
+  --accent-color: white;
+  --text-color: #000000;
+}
+
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+header,
+footer {
+  background-color: black;
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px 0;
+  /* margin-bottom: 40px; */
+  border: white 2px solid;
+}
+
+/* Navigation Menu */
+nav {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  /* position: sticky; */
+  top: 0;
+  z-index: 10;
+  margin-bottom: 10px;
+  border: white 2px solid;
+}
+nav a {
+  color: var(--accent-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  /* border-left: 2px solid white;
+      border-right: 2px solid white; */
+}
+nav a:hover {
+  background-color: white;
+  color: var(--text-color);
+}
+
+/* Main Section */
+main {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: var(--text-color);
+  /* box-shadow: 0 0 15px var(--primary-color); */
+  border: white 2px solid;
+}
+section {
+  margin-bottom: 40px;
+}
+
+/* Profile Card */
+#about {
+  display: flex;
+  border: 2px solid white;
+}
+#text {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#LinkedInButton {
+  padding: 7px;
+  border: 1px solid white;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  align-self: center;
+}
+#LinkedInButton:hover {
+  padding: 7px;
+  border: 1px solid white;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.profile-card {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  color: var(--text-color);
+  border: 2px solid white;
+}
+.profile-card h2,
+p {
+  color: white;
+  font-size: 20px;
+}
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.profile-card button {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.profile-card button:hover {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.gallery img {
+  width: 200px;
+  height: 200px;
+  border: 3px solid var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--primary-color);
+}
+.gallery figcaption {
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #000000;
+  padding: 20px;
+  border: white 2px solid;
+  color: var(--accent-color);
+}
+.contact h2 {
+  text-align: center;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.contact input,
+.contact textarea,
+.contact button {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: white 2px solid;
+}
+.contact button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+/* Blog and Portfolio Sections */
+.blog,
+.portfolio {
+  background-color: var(--text-color);
+  padding: 20px;
+}
+
+.blog h2,
+.portfolio h2 {
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.blog p,
+.portfolio p {
+  color: var(--primary-color);
+  line-height: 1.8;
+}
+
+.skills h2,
+p {
+  text-align: center;
+  color: var(--accent-color);
+}
+
+/* Footer */
+footer p {
+  margin: 0;
+  color: white;
+}
