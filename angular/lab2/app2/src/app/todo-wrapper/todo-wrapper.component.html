@@ -1,0 +1,2 @@
+<app-todo-form (recieveListFromForm)="addTodoItem($event)"></app-todo-form>
+<app-todo-list [items]="todoItems" (deleteItem)="deleteTodoItem($event)"></app-todo-list>

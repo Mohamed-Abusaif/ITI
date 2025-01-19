@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "profilePicture": "https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg",
+    "username": "john_doe",
+    "email": "john.doe@example.com",
+    "phoneNumber": "+1234567890",
+    "birthdate": "1990-05-14",
+    "role": "Admin"
+  },
+  {
+    "id": 2,
+    "profilePicture": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
+    "username": "jane_smith",
+    "email": "jane.smith@example.com",
+    "phoneNumber": "+9876543210",
+    "birthdate": "1992-11-23",
+    "role": "Admin"
+  },
+  {
+    "id": 3,
+    "profilePicture": "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
+    "username": "alice_wonder",
+    "email": "alice.wonder@example.com",
+    "phoneNumber": "+1928374650",
+    "birthdate": "1985-03-02",
+    "role": "User"
+  },
+  {
+    "id": 4,
+    "profilePicture": "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=pexels-justin-shaifer-501272-1222271.jpg&fm=jpg",
+    "username": "bob_builder",
+    "email": "bob.builder@example.com",
+    "phoneNumber": "+5647382910",
+    "birthdate": "1988-07-18",
+    "role": "Moderator"
+  },
+  {
+    "id": 5,
+    "profilePicture": "https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_1280.jpg",
+    "username": "charlie_brown",
+    "email": "charlie.brown@example.com",
+    "phoneNumber": "+1029384756",
+    "birthdate": "1995-12-30",
+    "role": "User"
+  }
+]

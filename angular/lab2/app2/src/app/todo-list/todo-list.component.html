@@ -1,0 +1,8 @@
+<ul class="list-group mt-5 border border-primary">
+  @for (item of items; track $index) {
+  <li class="list-group-item">
+    {{ item.text }}
+    <button class="btn btn-danger btn-sm" (click)="onDelete(item.id)">Delete</button>
+  </li>
+  }
+</ul>

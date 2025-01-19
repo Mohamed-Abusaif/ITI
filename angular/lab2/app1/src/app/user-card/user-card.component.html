@@ -1,0 +1,35 @@
+<div class="card h-100">
+  <img
+    [src]="userData.profilePicture"
+    style="width: 120px; height: 120px"
+    class="card-img-top"
+    alt="..."
+  />
+
+  <div class="card-body mx-auto">
+    <h5 class="card-title">{{ userData.username }}</h5>
+    <ul class="card-text">
+      <li>{{ userData.email }}</li>
+      <li>{{ userData.phoneNumber }}</li>
+      <li>{{ userData.birthdate }}</li>
+      @if (userData.role === 'Admin') {
+      <button type="button" class="btn btn-danger">{{ userData.role }}</button>
+      } @if (userData.role === 'Moderator') {
+      <button type="button" class="btn btn-warning">{{ userData.role }}</button>
+      } @if (userData.role === 'User' ) {
+      <button type="button" class="btn btn-success">{{ userData.role }}</button>
+      }
+    </ul>
+    <!-- <button class="btn btn-danger" (click)="handleDeletItem(userData.id)">
+      Delete recipe
+    </button> -->
+  </div>
+</div>
+<!-- 
+id: number;
+profilePicture: string;
+username: string;
+email: string;
+phoneNumber: string;
+birthdate: string;
+role: string; -->
