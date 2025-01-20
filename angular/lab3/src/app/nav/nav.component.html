@@ -1,0 +1,77 @@
+<nav
+  class="navbar navbar-expand-lg border rounded"
+  style="background-color: #ff69b4; color: #ffffff"
+>
+  <div class="container px-5">
+    <a class="navbar-brand" href="#!" style="color: #ffffff"
+      >Welcome To Beauty Center!</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style="border-color: #ffffff"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            style="color: #ffffff"
+            aria-current="page"
+            routerLink="/"
+            routerLinkActive="link-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home <i class="bi bi-house-door"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            style="color: #ffffff"
+            routerLink="product-list"
+            routerLinkActive="link-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Products <i class="bi bi-shop"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            style="color: #ffffff"
+            routerLink="cart"
+            routerLinkActive="link-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Cart <i class="bi bi-cart"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            style="color: #ffffff"
+            routerLink="login"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="link-active"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            style="color: #ffffff"
+            routerLink="register"
+            routerLinkActive="link-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Register</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
