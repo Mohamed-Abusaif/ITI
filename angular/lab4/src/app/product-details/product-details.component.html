@@ -1,0 +1,69 @@
+<div class="container mt-5">
+  <div class="row">
+    <!-- Product Images -->
+    <div class="col-md-6 mb-4">
+      <img
+        alt="Product"
+        class="img-fluid rounded mb-3 product-image"
+        id="mainImage"
+        style="height: 50rem"
+        [src]="productInFile.images[0]"
+      />
+      <div class="d-flex justify-content-between"></div>
+    </div>
+    <!-- Product Details -->
+    <div class="col-md-6">
+      <h2 class="mb-3">{{ productInFile?.title }}</h2>
+      <p style="font-weight: 700" class="text-muted mb-4">
+        Category: {{ productInFile?.category }}
+      </p>
+      <h3>Brand: {{ productInFile?.brand }}</h3>
+      <div class="mb-3">
+        <span class="h4 me-2">Price: ${{ productInFile?.price }}</span>
+        <span class="text-muted"><s>$399.99</s></span>
+      </div>
+
+      <div>
+        <span>Rate: </span>
+        @if (productInFile?.rating == 0 ) {
+        <i class="bi bi-star"></i><i class="bi bi-star"></i
+        ><i class="bi bi-star"></i><i class="bi bi-star"></i
+        ><i class="bi bi-star"></i>
+        } @if (productInFile?.rating >=1 && productInFile?.rating <2 ) {
+        <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i
+        ><i class="bi bi-star"></i><i class="bi bi-star"></i
+        ><i class="bi bi-star"></i>
+        } @if (productInFile?.rating >=2 && productInFile?.rating <3 ) {
+        <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i> <i class="bi bi-star"></i>
+        <i class="bi bi-star"></i>
+
+        } @if (productInFile?.rating >=3 && productInFile?.rating <4 ) {
+        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+        ><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+        <i class="bi bi-star"></i>
+        } @if (productInFile?.rating >=4 && productInFile?.rating <5 ) {
+        <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+        } @if (productInFile?.rating ==5 ) {
+        <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+
+        }
+      </div>
+
+      <h4>Details:</h4>
+      <p class="mb-4">
+        {{ productInFile?.description }}
+      </p>
+
+      <button class="btn btn-primary btn-lg mb-3 me-2">
+        <i class="bi bi-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
