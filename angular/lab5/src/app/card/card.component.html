@@ -1,0 +1,95 @@
+<!-- Product -->
+<div class="d-flex justify-content-center align-items-center vh-15">
+  <div class="card text-center" style="width: 18rem">
+    @if (productItem.stock ==0 ) {
+    <div class="border rounded mb-2 text-center w-50 bg-danger text-white">
+      Out Of Stock
+    </div>
+    } @if (productItem.stock > 0 ) {
+    <div class="border rounded mb-2 w-50 text-center bg-success text-white">
+      In Stock
+    </div>
+    }
+    <div>
+      <span>Rate: </span>
+      @if (productItem.rating == 0 ) {
+      <i class="bi bi-star"></i><i class="bi bi-star"></i
+      ><i class="bi bi-star"></i><i class="bi bi-star"></i
+      ><i class="bi bi-star"></i>
+      } @if (productItem.rating >=1 && productItem.rating <2 ) {
+      <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i
+      ><i class="bi bi-star"></i><i class="bi bi-star"></i
+      ><i class="bi bi-star"></i>
+      } @if (productItem.rating >=2 && productItem.rating <3 ) {
+      <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-half"></i> <i class="bi bi-star"></i>
+      <i class="bi bi-star"></i>
+
+      } @if (productItem.rating >=3 && productItem.rating <4 ) {
+      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+      ><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+      <i class="bi bi-star"></i>
+      } @if (productItem.rating >=4 && productItem.rating <5 ) {
+      <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-half"></i>
+      } @if (productItem.rating ==5 ) {
+      <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+
+      }
+    </div>
+
+    <img
+      class="card-img-top"
+      style="height: 15rem"
+      [src]="productItem.images?.at(0)"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ productItem.title }}</h5>
+      <h5>{{ productItem.price }}</h5>
+
+      <p class="card-text">
+        {{ productItem.description }}
+      </p>
+
+      <a
+        href=""
+        class="btn btn-primary m-2"
+        (click)="handleRedirect($event, productItem.id)"
+        >Details</a
+      >
+      <a href="cart" class="btn btn-warning">Add to Cart</a>
+    </div>
+  </div>
+</div>
+
+<!-- <img
+    [src]="product"
+    style="width: 120px; height: 120px"
+    class="card-img-top"
+    alt="..."
+  /> -->
+<!-- 
+  <div class="card-body mx-auto">
+    <h5 class="card-title">{{ userData.username }}</h5>
+    <ul class="card-text">
+      <li>{{ userData.email }}</li>
+      <li>{{ userData.phoneNumber }}</li>
+      <li>{{ userData.birthdate }}</li>
+      @if (userData.role === 'Admin') {
+      <button type="button" class="btn btn-danger">{{ userData.role }}</button>
+      } @if (userData.role === 'Moderator') {
+      <button type="button" class="btn btn-warning">{{ userData.role }}</button>
+      } @if (userData.role === 'User' ) {
+      <button type="button" class="btn btn-success">{{ userData.role }}</button>
+      }
+    </ul> -->
+<!-- <button class="btn btn-danger" (click)="handleDeletItem(userData.id)">
+        Delete recipe
+      </button> -->
+<!-- </div> -->
