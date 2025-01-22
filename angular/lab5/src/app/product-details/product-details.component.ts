@@ -1,30 +1,48 @@
-import { Component, Input } from '@angular/core';
-import { Product } from '../types/product';
-import { ActivatedRoute, Route } from '@angular/router';
-import productsFile from '../../../public/products.json'
-import { Location } from '@angular/common';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit } from "@angular/core";
+import { Product } from "../types/product";
+import { ActivatedRoute, Router } from "@angular/router";
+import { ProductsRequestService } from "../services/products-request.service"; 
+import { Location } from "@angular/common";
+import { CommonModule } from "@angular/common";
+import { CartService } from '../services/cart.service'; 
 
 @Component({
-  selector: 'app-product-details',
+  selector: "app-product-details",
   imports: [CommonModule],
-  templateUrl: './product-details.component.html',
-  styleUrl: './product-details.component.css'
+  templateUrl: "./product-details.component.html",
+  styleUrls: ["./product-details.component.css"],
 })
-export class ProductDetailsComponent {
-  constructor(private route: ActivatedRoute) {
-    this.idParam = this.route.snapshot.params['id']; 
-  }
-  idParam: number;
-  products: Array<Product> = productsFile.products;
-  productInFile: any 
+export class ProductDetailsComponent implements OnInit {
+  idParam!: number;
+  productInFile!: any;
+
+  constructor(
+    private route: ActivatedRoute,
+    private productsRequestService: ProductsRequestService,
+    private cartService: CartService,
+    private router: Router
+  ) {}
+
   ngOnInit(): void {
+    this.idParam = Number(this.route.snapshot.paramMap.get("id"));
+    console.log("Product ID:", this.idParam); // Debugging line
 
-    this.idParam = Number(this.route.snapshot.paramMap.get('id'));
-
-
-    this.productInFile = this.products.find((productSearch) => productSearch.id === this.idParam);
+    this.productsRequestService.getOneProduct(this.idParam).subscribe({
+      next: (product) => {
+        console.log("Product fetched:", product); // Debugging line
+        this.productInFile = product;
+      },
+      error: (error) => {
+        console.error("Error fetching product:", error);
+      },
+      complete: () => {
+        console.log("Product fetch complete");
+      },
+    });
   }
 
-  
+  addToCart(): void {
+    this.cartService.addProductToCart(this.productInFile);
+    this.router.navigate(['/cart']);
+  }
 }

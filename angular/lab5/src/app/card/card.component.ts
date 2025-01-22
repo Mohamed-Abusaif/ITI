@@ -1,22 +1,27 @@
-import { Component, Input } from '@angular/core';
-import { Product } from '../types/product';
-import { Router } from '@angular/router';
+import { Component, Input } from "@angular/core";
+import { Product } from "../types/product";
+import { Router } from "@angular/router";
+import { CartService } from "../services/cart.service"; // Adjust the path as necessary
 
 @Component({
-  selector: 'app-card',
-  imports: [],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  selector: "app-card",
+  templateUrl: "./card.component.html",
+  styleUrls: ["./card.component.css"],
 })
 export class CardComponent {
   @Input()
   productItem!: Product;
-// product: any;
 
-constructor(private router: Router){}
+  constructor(private cartService: CartService, private router: Router) {}
 
-handleRedirect(event: Event, id: number){
-  event.preventDefault();
-  this.router.navigate(['product-details' , id])
-}
+  handleRedirect(event: Event, productId: number): void {
+    event.preventDefault();
+    // Implement your redirect logic here
+  }
+
+  addToCart(product: any): void {
+    this.cartService.addProductToCart(product);
+    console.log("Product added to cart:", product); // Debugging line
+    this.router.navigate(["/cart"]);
+  }
 }
